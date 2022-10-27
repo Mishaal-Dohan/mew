@@ -1,0 +1,19 @@
+{% extends 'dog_list.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Delete</title>
+</head>
+<body>
+    <h1>Delete Dog Record</h1>
+    <form action="{% url 'dog_delete' dog.pk %}" method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{dog.name}}"?</p>
+        <input type="submit" value="Delete">
+    </form>
+
+</body>
+</html>

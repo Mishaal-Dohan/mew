@@ -1,0 +1,20 @@
+{% extends 'dog_list.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Detail</title>
+</head>
+<body>
+    <p>Home: {{ dog.home }}</p>
+    <p>Name: {{ dog.name }}</p>
+    <p>Breed: {{ dog.breed }}</p>
+    <p>DOB: {{ dog.date_of_birth }}</p>
+    <p>Arrival Date: {{ dog.homedate_of_birth }}</p>
+    
+    <p><a href="{% url 'dog_edit' dog.pk %}">+ Edit Dog Record</a></p>
+    <p><a href="{% url 'dog_delete' dog.pk %}">+ Delete Doge Record</a></p>
+</body>
+</html>
